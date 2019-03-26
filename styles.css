@@ -1065,4 +1065,8 @@ input[type="checkbox"] {
     .messages .user {
         margin-right: 5px;
     }
+
+    .messages .message-title {
+        width: 185px;
+    }
 }
