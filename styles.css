@@ -945,3 +945,124 @@ input[type="checkbox"] {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
+@media only screen and (max-width: 768px) {
+    .reminders-calendar {
+        display: none;
+    }
+
+    .circle-of-care {
+        display: none;
+    }
+
+    .apps {
+        grid-template-columns: repeat(2, 297px);
+        grid-template-rows: repeat(4, 149px);
+        width: auto;
+        justify-content: center;
+    }
+
+    .avatar > .user-name {
+        display: none;
+    }
+
+    .content-right > .settings p {
+        display: none;
+    }
+
+    .content-right > .settings {
+        margin-left: 5px;
+    }
+
+    .content-right > .dot {
+        display: none;
+    }
+
+    .content-right > .logout p {
+        display: none;
+    }
+
+    .content-right > .logout {
+        margin-left: 15px;
+    }
+
+    nav {
+        padding: 0 10px;
+    }
+
+    .alerts-messagin .block-content {
+        width: auto;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .input-container {
+        margin-right: 25px;
+    }
+
+    /*.messages .user .user-status {
+        width: 24px;
+        border-radius: 999px;
+        height: 15px;
+        margin-right: 15px;
+    }*/
+
+    .main {
+        margin-right: 54px;
+    }
+    
+    .messages .user {
+        margin-right: 40px;
+    }
+
+    .messages .message-title {
+        margin-right: 0;
+    }
+
+    .alerts-messagin .block-content nav .search i {
+        margin-right: 21px;
+        margin-left: -25px;
+    }
+
+    .alerts-messagin .block-content nav .search input {
+        width: 87px;
+    }
+
+    .alerts-messagin .block-content nav .search {
+        margin-right: 0;
+    }
+
+    .alerts-messagin .block-content nav ul li:nth-child(4) {
+        width: 74px;
+    }
+
+    .alerts-messagin .block-content nav ul li:nth-child(3) {
+        width: 76px;
+    }
+
+    .alerts-messagin .block-content nav ul li:nth-child(2) {
+        width: 155px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .app-icon {
+        height: 68px;
+    }
+
+    .apps {
+        grid-template-columns: repeat(2, 245px);
+    }
+
+    .app-card-border .notifications {
+        margin-left: 190px;
+    }
+
+    .app-card-border .score {
+        margin-left: 75px;
+    }
+
+    .messages .user {
+        margin-right: 5px;
+    }
+}
