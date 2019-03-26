@@ -643,18 +643,37 @@ button.open {
 }
 
 
-.reminders-calendar .block-content .calendar .days .actual-day {
-    background-color:#ff503d;
+.reminders-calendar .block-content .calendar .days .actual-day span {
+    /*background-color:#ff503d;
     border-radius: 999px;
     color: #fff;
     font-weight: bold;
-    border: 1px solid #a5aca4;
+    border: 1px solid #a5aca4;*/
+    background-color: #ff503d;
+    border-radius: 989px;
+    padding: 5px;
+    width: 32px;
+    height: 32px;
+    border: 3px solid gray;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
 }
 
-.reminders-calendar .block-content .calendar .days .reminder-day {
-    background-color:#ff8b82;
+.reminders-calendar .block-content .calendar .days .reminder-day span {
+    /*background-color:#ff8b82;
     border-radius: 999px;
-    color: #fff;
+    color: #fff;*/
+    background-color: #ff8b82;
+    border-radius: 989px;
+    padding: 5px;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
 }
 
 
