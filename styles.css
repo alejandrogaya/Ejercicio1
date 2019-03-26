@@ -348,6 +348,22 @@ button:hover {
     margin-right: 15px;
 }
 
+.messages .previously-messages {
+    height: 100%;
+    background-color: #e6e6e6;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 54px;
+    padding: 0 10px;
+}
+
+.messages .previously-messages p {
+    font-family: arial;
+    color: #929697;
+    font-weight: bold;
+}
+
 .offline {
     background-color: #c5cecd;
 }
