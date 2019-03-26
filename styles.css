@@ -117,6 +117,7 @@ button:hover {
     margin: 0;
     height: 32px;
     margin-bottom: 5px;
+    filter: invert(45%) sepia(98%) saturate(2887%) hue-rotate(336deg) brightness(107%) contrast(112%);
 }
 
 .logout p {
