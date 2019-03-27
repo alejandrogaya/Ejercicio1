@@ -22,20 +22,14 @@ previousMonth.addEventListener('click', () => {
 const setCalendar = (modifiedMonth = null) => {
     let month;
     let year;
-    let day;
-
 
     if (modifiedMonth) date.setMonth(date.getMonth() + modifiedMonth);
 
-
     month = getMonth(date.getMonth());
     year = date.getFullYear();
-    //day = date.getDate();
 
     lastDayMonth = getLastDayOfMonth(date);
     firstDayMonth = getFirstDayOfMonth(date);
-    console.log(`last day: ${lastDayMonth}`);
-    console.log(`first day: ${firstDayMonth}`);
 
     actualMonth.innerHTML = `<b>${month.toUpperCase()} ${year}</b>`;
 
@@ -43,8 +37,6 @@ const setCalendar = (modifiedMonth = null) => {
     
     dateNumber = 1;
     lastDayMonth += firstDayMonth;
-    createDay = document.createElement("div");
-    span = document.createElement("span");
     i = 0;
     while (i < lastDayMonth) {
 
