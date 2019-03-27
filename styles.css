@@ -947,6 +947,16 @@ input[type="checkbox"] {
     transform: rotate(45deg);
 }
 
+p#previous-month:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+p#next-month:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
 @media only screen and (max-width: 768px) {
     .reminders-calendar {
         display: none;
