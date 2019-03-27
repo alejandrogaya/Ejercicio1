@@ -416,6 +416,7 @@ button:hover {
     font-size: 18px;
     outline: none;
     transform: rotate(-90deg);
+    transition: .3s;
 }
 
 button.open { 
