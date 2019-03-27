@@ -10,6 +10,34 @@ let divDays = document.getElementsByClassName('days')[0];
 const nextMonth = document.getElementById('next-month');
 const previousMonth = document.getElementById('previous-month');
 
+
+// ADDING EVENTLISTENERS TO SHOW/HIDE MESSAGE
+const messages = document.getElementsByClassName('messages');
+const messages_array = [...messages];
+
+let buttons = [];
+messages_array.forEach(e => {
+    if (e.children[4]) buttons.push(e.children[4]);
+});
+
+buttons.forEach(b => {
+    b.addEventListener('click', () => {
+        openMessage(b);
+    });
+});
+
+
+// ADDING EVENTLISTENERS TO DELETE MESSAGE
+const deleteButtonMessage = document.querySelectorAll(".message-content .btn-container .delete-message");
+deleteButtonMessage.forEach(b => {
+    b.addEventListener('click', () => {
+        deleteMessage(b);
+    });
+});
+
+
+
+
 nextMonth.addEventListener('click', () => {
     setCalendar(1);
 });
@@ -17,6 +45,29 @@ nextMonth.addEventListener('click', () => {
 previousMonth.addEventListener('click', () => {
     setCalendar(-1);
 });
+
+const deleteMessage = b => {
+    b.parentElement.parentElement.previousElementSibling.remove();
+    b.closest("div.message-content").remove(); 
+}
+
+const openMessage = b => {
+    message = b.closest("div");
+    if (b.classList.contains('open')) {
+        b.classList.remove('open');
+
+        if (message.nextElementSibling.classList.contains('message-content')) {
+            message.nextElementSibling.style = "display: none;";    
+        }
+        
+    } else {
+        b.classList.add('open');
+
+        if (message.nextElementSibling.classList.contains('message-content')) {
+            message.nextElementSibling.style = "display: block;";    
+        }
+    }
+}
 
 
 const setCalendar = (modifiedMonth = null) => {
@@ -34,13 +85,13 @@ const setCalendar = (modifiedMonth = null) => {
     actualMonth.innerHTML = `<b>${month.toUpperCase()} ${year}</b>`;
 
     divDays.innerHTML = '';
-    
+
     dateNumber = 1;
     lastDayMonth += firstDayMonth;
     i = 0;
     while (i < lastDayMonth) {
 
-        if(i < firstDayMonth ) {
+        if (i < firstDayMonth) {
             divDays.innerHTML += `
                 <div class="day">
                     <span></span>
